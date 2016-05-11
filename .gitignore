@@ -14,3 +14,8 @@ hs_err_pid*
 #ignore all backup files 
 *~ 
 
+#ignore latex intermediate files
+*.aux
+*.log
+*.synctex.gz
+
