@@ -1,0 +1,354 @@
+This is LuaTeX, Version beta-0.76.0-2013062821 (rev 4627)  (format=lualatex 2016.4.10)  11 MAY 2016 11:31
+**bare_conf.tex
+(./bare_conf.tex
+LaTeX2e <2014/05/01>
+Babel <3.9l> and hyphenation patterns for 68 languages loaded.
+("C:/Program Files/MiKTeX 2.9/tex/latex/ieeetran/IEEEtran.cls"
+Document Class: IEEEtran 2014/09/17 V1.8a by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpdimenC=\dimen104
+\@IEEEtrantmpcountA=\count79
+\@IEEEtrantmpcountB=\count80
+\@IEEEtrantmpcountC=\count81
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 458.
+("C:/Program Files/MiKTeX 2.9/tex/latex/psnfss/ot1ptm.fd"
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen105
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen106
+\CLASSINFOnormalsizeunitybaselineskip=\dimen107
+\IEEEnormaljot=\dimen108
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+\IEEEquantizedlength=\dimen109
+\IEEEquantizedlengthdiff=\dimen110
+\IEEEquantizedtextheightdiff=\dimen111
+\IEEEilabelindentA=\dimen112
+\IEEEilabelindentB=\dimen113
+\IEEEilabelindent=\dimen114
+\IEEEelabelindent=\dimen115
+\IEEEdlabelindent=\dimen116
+\IEEElabelindent=\dimen117
+\IEEEiednormlabelsep=\dimen118
+\IEEEiedmathlabelsep=\dimen119
+\IEEEiedtopsep=\skip41
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@IEEEsubequation=\count86
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count87
+\c@table=\count88
+\@IEEEeqnnumcols=\count89
+\@IEEEeqncolcnt=\count90
+\@IEEEsubeqnnumrollback=\count91
+\@IEEEquantizeheightA=\dimen120
+\@IEEEquantizeheightB=\dimen121
+\@IEEEquantizeheightC=\dimen122
+\@IEEEquantizeprevdepth=\dimen123
+\@IEEEquantizemultiple=\count92
+\@IEEEquantizeboxA=\box26
+\@IEEEtmpitemindent=\dimen124
+\c@IEEEbiography=\count93
+\@IEEEtranrubishbin=\box27
+) ("C:/Program Files/MiKTeX 2.9/tex/latex/float/float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count94
+\float@exts=\toks15
+\float@box=\box28
+\@float@everytoks=\toks16
+\@floatcapt=\box29
+)
+("C:/Program Files/MiKTeX 2.9/tex/latex/geometry/geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/graphics/keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifvtex.sty"
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:/Program Files/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count95
+\Gm@cntv=\count96
+\c@Gm@tempcnt=\count97
+\Gm@bindingoffset=\dimen125
+\Gm@wd@mp=\dimen126
+\Gm@odd@mp=\dimen127
+\Gm@even@mp=\dimen128
+\Gm@layoutwidth=\dimen129
+\Gm@layoutheight=\dimen130
+\Gm@layouthoffset=\dimen131
+\Gm@layoutvoffset=\dimen132
+\Gm@dimlist=\toks18
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/geometry/geometry.cfg"))
+("C:/Program Files/MiKTeX 2.9/tex/latex/koma-script/scrextend.sty"
+Package: scrextend 2015/02/07 v3.16 KOMA-Script package (extend other classes wi
+th features of KOMA-Script classes)
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/koma-script/scrkbase.sty"
+Package: scrkbase 2015/02/07 v3.16 KOMA-Script package (KOMA-Script-dependent ba
+sics and keyval usage)
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/koma-script/scrbase.sty"
+Package: scrbase 2015/02/07 v3.16 KOMA-Script package (KOMA-Script-independent b
+asics and keyval usage)
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/koma-script/scrlfile.sty"
+Package: scrlfile 2015/02/07 v3.16 KOMA-Script package (loading files)
+
+Package scrlfile, 2015/02/07 v3.16 KOMA-Script package (loading files)
+                  Copyright (C) Markus Kohm
+
+)))) ("C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/graphics/trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:/Program Files/MiKTeX 2.9/tex/latex/00miktex/graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/pdftex-def/pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/pdftexcmds.sty"
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO)
+
+
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifluatex.sty"
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX detected.
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/luatex-loader.sty"
+Package: luatex-loader 2010/03/09 v0.4 Lua module loader (HO)
+
+(C:/Program Files/MiKTeX 2.9/scripts/oberdiek/oberdiek.luatex.lua))
+\pdftexcmds@toks=\toks19
+)
+\Gread@gobject=\count98
+))
+\Gin@req@height=\dimen133
+\Gin@req@width=\dimen134
+)
+(./bare_conf.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 333.
+LaTeX Font Info:    ... okay on input line 333.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 333.
+LaTeX Font Info:    ... okay on input line 333.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 333.
+LaTeX Font Info:    ... okay on input line 333.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 333.
+LaTeX Font Info:    ... okay on input line 333.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 333.
+LaTeX Font Info:    ... okay on input line 333.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 333.
+LaTeX Font Info:    ... okay on input line 333.
+
+-- Lines per column: 54 (approximate, difference = 2.43001pt).
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(54.2025pt, 505.89pt, 54.2025pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=505.89pt
+* \textheight=650.43001pt
+* \oddsidemargin=-18.06749pt
+* \evensidemargin=-18.06749pt
+* \topmargin=-30.56761pt
+* \headheight=12.0pt
+* \headsep=18.56761pt
+* \topskip=12.0pt
+* \footskip=40.5821pt
+* \marginparwidth=20.0pt
+* \marginparsep=10.0pt
+* \columnsep=12.0pt
+* \skip\footins=10.79993pt plus 4.79993pt minus 2.39996pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumntrue
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+("C:/Program Files/MiKTeX 2.9/tex/context/base/supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count99
+\scratchdimen=\dimen135
+\scratchbox=\box30
+\nofMPsegments=\count100
+\nofMParguments=\count101
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count102
+\MPscratchDim=\dimen136
+\MPnumerator=\count103
+\makeMPintoPDFobject=\count104
+\everyMPtoPDFconversion=\toks21
+) <image/kalah.jpg, id=1, 501.37312pt x 262.35516pt>
+File: image/kalah.jpg Graphic file (type jpg)
+ <use image/kalah.jpg>
+Package pdftex.def Info: image/kalah.jpg used on input line 429.
+(pdftex.def)             Requested size: 246.94499pt x 129.21968pt.
+
+<image/kalah_playeraction.jpg, id=2, 714.04266pt x 702.37407pt>
+File: image/kalah_playeraction.jpg Graphic file (type jpg)
+
+<use image/kalah_playeraction.jpg>
+Package pdftex.def Info: image/kalah_playeraction.jpg used on input line 437.
+(pdftex.def)             Requested size: 246.94499pt x 242.90877pt.
+
+<image/kalah_structure.jpg, id=3, 951.555pt x 408.77719pt>
+File: image/kalah_structure.jpg Graphic file (type jpg)
+
+<use image/kalah_structure.jpg>
+Package pdftex.def Info: image/kalah_structure.jpg used on input line 447.
+(pdftex.def)             Requested size: 246.94499pt x 106.07996pt.
+ [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+ <./image/kalah.jpg>]
+<image/kalah_rule.jpg, id=12, 600.36797pt x 334.24875pt>
+File: image/kalah_rule.jpg Graphic file (type jpg)
+
+<use image/kalah_rule.jpg>
+Package pdftex.def Info: image/kalah_rule.jpg used on input line 459.
+(pdftex.def)             Requested size: 246.94499pt x 137.48149pt.
+
+<image/kalah_selector.jpg, id=13, 924.45375pt x 544.65985pt>
+File: image/kalah_selector.jpg Graphic file (type jpg)
+
+<use image/kalah_selector.jpg>
+Package pdftex.def Info: image/kalah_selector.jpg used on input line 469.
+(pdftex.def)             Requested size: 246.94499pt x 145.48938pt.
+ [2 <./image/kalah_playeraction.jpg> <./image/kalah_structure.jpg> <./image/kala
+h_rule.jpg> <./image/kalah_selector.jpg>]
+<image/kalah_dump.jpg, id=17, 690.70547pt x 405.38953pt>
+File: image/kalah_dump.jpg Graphic file (type jpg)
+
+<use image/kalah_dump.jpg>
+Package pdftex.def Info: image/kalah_dump.jpg used on input line 485.
+(pdftex.def)             Requested size: 246.94499pt x 144.93184pt.
+
+Underfull \hbox (badness 1478) in paragraph at lines 490--491
+[][]\OT1/ptm/m/n/10 The DumpS-in-gle-ton class holds a static in-stance of
+ []
+
+<image/design_result.jpg, id=18, 356.83313pt x 598.48593pt>
+File: image/design_result.jpg Graphic file (type jpg)
+
+<use image/design_result.jpg>
+Package pdftex.def Info: image/design_result.jpg used on input line 497.
+(pdftex.def)             Requested size: 246.94499pt x 414.17944pt.
+
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[3 <./image/kalah_dump.jpg> <./image/design_result.jpg>] (./bare_conf.aux) )
+
+Here is how much of LuaTeX's memory you used:
+ 3470 strings out of 494733
+ 100000,154059 words of node,token memory allocated
+ 284 words of node memory still in use:
+    nodes
+   avail lists: 2:17,3:123,4:943,5:121,6:3469,7:201,9:153,10:342
+ 6873 multiletter control sequences out of 65536+200000
+ 115 fonts using 4526271 bytes
+ 43i,7n,30p,895b,239s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/M
+iKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utm
+r8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bare_conf.pdf (3 pages, 1462750 bytes).
+
+PDF statistics: 36 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
