@@ -7,8 +7,13 @@
 	\begin{tabular}{@{}#1@{}}#2\end{tabular}
 }
 
+\newcommand{\TabFooter}[2]{
+	\multicolumn{7}{p{\columnwidth}}{\textsuperscript{#1}\footnotesize{#2}} \\
+}
+
+
 \newcommand{\TableBlock}[3]{
-	\begin{table}[!hbp]
+	\begin{table}[H]
 		\renewcommand{\arraystretch}{1.3}	
 		\caption{#2}
 		\label{tab:#1}
@@ -21,7 +26,15 @@
 
 
 \newcommand{\TabMetricHeader}{
-	\textbf{PACKAGE} & \textbf{TYPE} & \textbf{MOC} & \textbf{DIT} & \textbf{NOC} & \textbf{WMC} & \textbf{NOSM} \\
+	\textbf{PACKAGE} & \textbf{TYPE} & \textbf{CBO} & \textbf{DIT} & \textbf{NOC} & \textbf{WMC} & \textbf{NOSM} \\
+}
+
+\newcommand{\TabMetricFooter}{
+		\TabFooter{1}{CBO: Coupling between Object Classes}
+		\TabFooter{2}{DIT: Depth of Inheritance Tree}
+		\TabFooter{3}{NOC: Number of Children}
+		\TabFooter{4}{WMC: Weighted Methods Per Class}
+		\TabFooter{5}{NOSM: Number of Static Methods}
 }
 
 \newcommand{\TabMetricColumn}[7]{

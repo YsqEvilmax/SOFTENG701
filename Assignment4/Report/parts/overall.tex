@@ -1,20 +1,20 @@
-\TableBlock{overall}{The overall comparison of 4 designs.}{
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.3}	
+	\caption{The overall comparison of 4 designs.}
+	\label{tab:overall}
+	\centering
+	\begin{tabularx}{\columnwidth}{@{}lcccc@{}}
 	\toprule
 	\toprule
 	& \textbf{Design A} & \textbf{Design B} & \textbf{Design S1} & \textbf{Design syu702} \\ 
 	\midrule
-	\tabincell{l}{\textbf{Number} \\ \textbf{of} \\ \textbf{Package}}           
-	& 1         &          &          &               \\\addlinespace
-	\tabincell{l}{\textbf{Number} \\ \textbf{of} \\ \textbf{Classes}}           
-	& 4        & 20       & 8         & 28            \\\addlinespace
-	\tabincell{l}{\textbf{Number} \\ \textbf{of} \\ \textbf{Exception} \\ \textbf{Classes}} 
-	& 0        & 0        & 0         & 0             \\\addlinespace
-	\tabincell{l}{\textbf{Number} \\ \textbf{of} \\ \textbf{Interfaces}}        
-	& 0        & 6        & 1         & 8             \\\addlinespace
-	\tabincell{l}{\textbf{Number} \\ \textbf{of} \\ \textbf{Enums}}             
-	& 1        & 2        & 2         & 0             \\\addlinespace
-	\tabincell{l}{\textbf{Number} \\ \textbf{of} \\ \textbf{Types}}             
-	&          &          &          &             \\
+	\textbf{NoT}  & 5  & 28 & 11 & 36            \\
+	\textbf{NoP}  & 1  & 6  & 4  & 7             \\
+	\textbf{NoI}  & 0  & 6  & 1  & 8             \\
+	\textbf{NoE}  & 1  & 2  & 2  & 0             \\
+	\textbf{NoC}  & 4  & 20 & 8  & 28            \\
+	\textbf{NoEC} & 0  & 0  & 0  & 0             \\	
 	\bottomrule
 	\bottomrule
-}
+	\end{tabularx}
+\end{table}

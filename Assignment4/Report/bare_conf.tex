@@ -93,6 +93,8 @@
 \usepackage{scrextend}
 \addtokomafont{labelinglabel}{\sffamily}
 
+\usepackage{amssymb}
+
 \input{parts/image.tex}
 \input{parts/table.tex}
 
@@ -169,7 +171,7 @@
 
 % *** MATH PACKAGES ***
 %
-%\usepackage{amsmath}
+\usepackage{amsmath}
 % A popular package from the American Mathematical Society that provides
 % many useful and powerful commands for dealing with mathematics.
 %
@@ -309,7 +311,7 @@
 % Basically, \url{my_url_here}.
 
 
-
+\input{parts/glossaries}
 
 % *** Do not adjust lengths that control margins, column widths, etc. ***
 % *** Do not use packages that alter fonts (such as pslatex).         ***
@@ -330,7 +332,7 @@
 	% not capitalized unless they are the first or last word of the title.
 	% Linebreaks \\ can be used within to get better formatting as desired.
 	% Do not put math or special symbols in the title.
-	\title{A modifiable design of Kalah game}
+	\title{The Modifiability Evaluation of 4 Designs of the Kalah Game}
 	
 	
 	% author names and affiliations
@@ -380,10 +382,13 @@
 	% As a general rule, do not put math, special symbols or citations
 	% in the abstract
 	\begin{abstract}
-		The modifiability has long been viewed as one of the important matrices of a software design with good a quality. This report will use a popular game named Kalah as a demonstration, firstly defining my understanding of modifiability and then, proposing a design of Kalah, which satisfies the modifiability most.
+	The modifiability has long been viewed as one of the important matrices of a software design with a good quality. However, there exists no obvious metrics to evaluate design modifiability. Even the understandings of modifiability are not widely agreed. This report will compare 4 different designs, and then discuss the meaning of modifiability as well as the assessments.  
 	\end{abstract}
 	
-	% no keywords
+	% Note that keywords are not normally used for peerreview papers.
+	\begin{IEEEkeywords}
+	Modifiability, metrics, quantity, quality, empirical relationship.
+	\end{IEEEkeywords}
 	
 	
 	
@@ -402,94 +407,94 @@
 	
 	\section{Introduction}
 	% no \IEEEPARstart
-	The modifiability of code, which means the capability of the software product to be modified, is one of the important attributes when software designers evaluate the quality of their designs. As a sub-characteristic of maintainability, it can localise changes, prevent ripple effects and defer binding time. To practice and show my understanding of modifiability, in this report, I use a simple but popular game named Kalah,  which has multiple different ways to play, as an example. My design will be explained in detial with UML diagrams in the next section.
-	
-	\hfill Shaoqing Yu
-	
-	\hfill 5 May, 2016
+	The modifiability of design, which means that to how much degree the design can be changed when requirements vary, is one of the important attributes when software designers evaluate the quality of their designs. To clarify the definition and effective metrics of design modifiability, this report will compare 4 designs from both quantitative and qualitative perspectives, and then by analysing the empirical relationship between them, conclude the metrics to effectively measure design modifiability.
 	
 	\section{Modifiablity Defination}
+	Literally, the modifiability of design means the capability of the software to be modified. The modification discussed here is the changes happens on design rather than software behaviours. Under a certain change case, a valid modification means to the largest extend as possible to avoid changes on existing code, but satisfies the changing requirements \cite{2}.
 	
-
-	\input{parts/overall.tex}	
+	It is a concept widely discussed in \gls{OO} software design methodology, since, more often than not, the modifiability is reached through \gls{OO} design principles, such as abstraction, encapsulation, inheritance, polymorphism \cite{4}. It means, to some extends, the modifiability of a design can be reflected by the quantity of applying \gls{OO} design paradigm. However, we cannot simply claim that the more \gls{OO} design principles are applied \cite{3}, the more modifiability a design will has, since the \gls{OO} design principles could be misused so that have no actual effects at all. To determine the effectiveness of \gls{OO} design paradigm, the quality of design should also be concerned and tested against some change cases.
+	
+	In the coming sections, this report will compare the \gls{OO} design metrics of 4 designs quantitatively, and then evaluate the design quality against several change cases.
+	
+	\section{Quantitative Comparison}
+	The modifiability can be reflected by some metrics of \gls{OO} design paradigm statistically. This results from the fact that the goal of \gls{OO} design paradigm is to better support changes than what came before. Without properly applying sufficient \gls{OO} design principles, the design will have very limited changeability.
+	
+	To measure the usability of the \gls{OO} design principles within a design, the \gls{NoT}, which stands for the scale of the abstraction of this design, is the first metric need to be concerned. It is hard to believe a simple design will have too much modifiability. The \gls{NoP} reflects the maintainability of semantic coherence. The \gls{NoI}, which is the abstraction of common services, can limit the communication protocols between objects. To keep the expected changes on enums at the same place, the \gls{NoE} should also be recorded here. The \gls{NoEC} will be excluded and listed separately from the \gls{NoC}, which is the direct result of applying \gls{OO} design paradigm, as the exception capturing have no impact on modifiability. 
+	
+	Besides these, specifically to each design, the \gls{CBO}~\cite{1}, includes all the dependencies and associations between class, should be not high if a better modifiability is expected. The \gls{DIT} and \gls{NOC}~\cite{1} are the straight reflections of the using of the inheritance principle. The \gls{WMC}~\cite{1}, which implies the count of methods per class, repeals the changeability since a class with many methods is likely to be more application specific, limiting the possibility of reusing and modifying. The static methods are effective at decoupling since they provide global accessibility. However, too much using of it will destroy the encapsulation principle, hence it is also listed \gls{NOSM} here.  
+	
+	In the next section, the report will firstly provide an overview of statistics of 4 designs, and then analyse them separately.
+	
+	\subsection{Overall}
+	This section will compare the 4 design quantitatively by statistics of \gls{OO} design metrics, specifically, from the number of package, classes, exception classes, interfaces, enums and types respectively. 
+	
+	\input{parts/overall.tex}
+	According to the overall statistics of each design as Table~\ref{tab:overall} shows, we can see that  either of design B and syu702 has more than 30 types totally to abstract and encapsulate different functionalities of the Kalah game. By contrast, the total \gls{NoT} in either design B or S1 is around 10, which means the using of \gls{OO} design principles within design are very limited. The smaller \gls{NoI} in design A and S1 means to lower level of common service abstraction. Meanwhile, compared with design B and syu702, the gls{NoC} in design A and S1 is insufficient. If we assume the original requirements are the same and all be met by each design, the densities of functionality implementation in each class in design A and S1 are much higher than design B and syu702. It is acknowledged that the class with high functional implementation density is hard to maintain and reuse. 
+	
+	\subsection{Design A}		
 	\input{parts/metrics_a.tex}
+	As the Table~\ref{tab:overall} indicates, the design A has totally 5 types including 4 classes, 1 enum and no interface. The detailed metrics of each type are listed in Table~\ref{tab:metrics_a}. The highest \gls{CBO} in GamePlay is 2, which looks noraml. However, considering there are totally 5 types, the modification on this class should be done carefully. There exists no inheritance within this design as each class has neither parent (the maximum \gls{DIT} is 1) nor child (the maximum \gls{NOC} is 0). The high \gls{WMC} of class Board implies that this class is too heavy, having some functions which could be distributed.
 	
-	\section{Design Explanation}
-	To reach a better modifiability, usually some design patterns and OOP approaches (abstraction, encapsulation, polymorphism and inheritance) should be properly applied. My detailed design of Kalah game is showed as below. There are totally 6 packages in my implementation, each of them contains a group of classes which are tightly interrelated.
+	\subsection{Design B}
+	\input{parts/metrics_b.tex}
+	Although there are 20 classes, 6 interfaces and 2 enums in design B according to Table~\ref{tab:overall}, it has only one effective inheritance between class Human and Player according to \gls{DIT} and \gls{NOC}. The \gls{CBO} ranges from 0 to 4, which is not too high compared with the total \gls{NoT}. It is worth noting that the \gls{NOSM} in GameFactory effectively decouple the dependence with other classes.  Generally, the methods' weight are distributed, but the \gls{WMC} of Pit and StdToplogy are still a little bit high compared with others. 
 	
-	\subsection{kalah}
+	\subsection{Design S1}
+	\input{parts/metrics_s1.tex}
+	For design S1, there are 8 classes, 1 interface and and 2 enums recorded on Table~\ref{tab:overall}. Despite House and Store are sub-classes of Container, the inheritance is not effective here since on Table~\ref{tab:metrics_s1}, the \gls{WMC} of them are low. This results in 2 "god classes", Board and Printer, which do complicated tasks that should have been distributed to other classes properly. What's worse, the classes with higher \gls{WMC} also have more \gls{CBO}.
 	
-	\ImageBlock{kalah}{The design of kalah package.}
+	\subsection{Design syu702}
+	\input{parts/metrics_syu702.tex}
+	The detailed metric statistics about design syu702, which has 28 classes and 8 interfaces on Table~\ref{tab:overall}, are listed on Table~\ref{tab:metrics_syu702}. The low \gls{CBO} means to good code modularity and encapsulation.  In this design, the inheritance is effectively used more than one time, which reduce the code duplication. The \gls{WMC} of each class ranges from 2 to 11, which means there is no "god class". Even completely rewriting some classes will not affect a lot implementation due to the low \gls{WMC}.
 	
-	As showed in Figure~\ref{fig:kalah}, there are only 2 class in this package: Kalah and Game. By inheriting from Game, which is the abstraction of games in the real world, the Kalah only needs to (also has to) implement the logics in Idle(), AddPlayers() and AddActions(). 
+	\subsection{summary}
+	From the statistical result of the \gls{OO} design metrics, design B and design syu702 have more modifiability then other 2. To be specific, the design syu702 is best among them.  
+	 
+	\section{Qualitative Comparison}
+	To be complementary, the quality of design, which involves the adaptations to change cases and some design patterns, should also be discussed, as sometimes the \gls{OO} design principles could be inappropriately applied. To check the real effects of applying the \gls{OO} design paradigm, the 4 designs with their UML diagram will be evaluated against the change cases listed in Table~\ref{tab:cases}.
 	
-	\Item{Modifiablity}{With the inheritance from Game, developers can define not only Kalah but also other games by simply creating a class and implementing the abstract functions defined in Game (Idle, AddPlayers, AddActions).}
+	\input{parts/cases}
+
+	\subsection{Design A}
+	The UML diagram of design A is demonstrated at appendix A.
 	
-	\subsection{kalah.playeraction}
+	Considering there are very little abstraction of objects and solid encapsulation, but neither inheritance nor polymorphism to enable modification in design A, the modifiability is very limited. It means no matter what kind of modification the developer want to bring to any class in design A, he has to not only edit the target class, but also modify other classes associated. None of the change cases will be easily met in this case.
 	
-	\ImageBlock{kalah_playeraction}{The design of kalah.playeraction package.}
+	\subsection{Design B}
+	The UML diagram of design B is demonstrated at appendix B.
 	
-	This package defines the most important 2 parts in a Game: the players and their actions. 
+	The interface PitTopology makes changing the direction of sowing not difficult. The package kalah.move brings more scalability to adding a new move  such as "UND" to the game. There is a design pattern named "simple factory" applied in GameFactory. With the class Game, GameState and GameFactory, the "S/L" change case can be easily implemented by saving or loading a instance of GameState in GameFactory. To change the capture rule to "EPY" or "TKC", the interface BoardStateProcessor and BoardStateProperty should be realizated like KalahStdCaptureProcessor and KalahStdCaptureProperty, but with different logics. The abstract class Player can be extended to create a new robot player, just similar with the class Player. The only problem of this design regarding to these change cases is to change the IO output. If any new output, such as "*" to represent seeds on playing board, is required, the developers have to seek through all the classes outputting something to the IO, and change the code by hands.
 	
-	As Figure~\ref{fig:kalah_playeraction} indicates, each action (for example SowAction) implementing IAction interface has its own Do functionality, in which the logics of this action should be; each player (for example KalahPlayer) implementing IPerson has its own Act functionality, which receives a instance of IAction and then handles it.
+	\subsection{Design S1}
+	The UML diagram of design S1 is demonstrated at appendix C.
 	
-	\Item{Modifiablity}{With this design, developer can define different users executing different actions by inheriting GameUser and GameAction and implementing the detialed logics in their Do() and Act() respectively.}
+	The design S1 has a typical tree structure. A kalah game has a Board and a Printer, a Board has several Players, each Player holds some Houses and one Store. Although there exists a inheritance, the only one, between Container and House and Store, which means it is easy to add a new kind of place to store and sow the seeds, this inheritance is not effective as it brings no changeability to the tree structure we mentioned before. The interface User makes adding a new user, such as a robot, possible, but the actual player actions are required to be implemented in class Board. The enums Command and GameVariables bring more ease on adding new moves such as "UND", but this changeability is behaviour based rather than design based, which means the associated code is still expected in class Kalah. Therefore, actually this design is just a little bit better than design A on modifiability, even some \gls{OO} design principles are used. Despite more classes and enums are used in this design compared with design A, which means more design abstraction and object categorization, the inappropriate associations between classes, such as "a player has some houses and a store" and "a board has players", reduce the quality of design. The class Printer concentrates on IO displaying, which narrowed the range of code to change under "PRE". However, the classes which want to print has to call the instance of Printer somehow. This leads to high potential \gls{CBO} on class printer if many classes have displaying requirements.
 	
-	\subsection{kalah.structure}
+	\subsection{Design syu702}	
+	The UML diagram of design syu702 is demonstrated at appendix D.
+		
+	The design of package kalah.selector is similar as a design pattern named "iterator", but not the typical one. As the name implies, the typical iterator provides a structure by which the developers can easily iterate elements in a collection. Besides the iteration function which is the same as a iterator, a selector focuses on returning the expected elements. With this design, the change case "DIR" can be easily implemented by creating a new selector named "ReversingSelector" and then letting other classes who expect this functionality inherit from it.
 	
-	\ImageBlock{kalah_structure}{The design of kalah.structure package.}
+	The design of package kalah.rule makes the kalah game more scalable. Here a design pattern named "observer" is applied to decouple the rules and their effects on the kalah game. With this design, the implementations of change cases "EPY" and "TKC", or even other more new rules, are as simple as to create a new class to realizate the IRule interface and implement how to affect the game in the method Affect. The instance of this class should be properly observed by RuleObserver at where it occurs after the player's certain action, for example, the SowAction.
 	
-	This package defines the data structure of Kalah game. As we see from Figure~\ref{fig:kalah_structure}, basically, there are 2 kinds of Container, House and Store. They all have a Group which they belong to, meanwhile, each House instance holds its own index.  
+	The design of package kalah.playeraction aims to define game players and their different actions. The class ActionPool can load different actions and index them by literals. With the help of ActionPool, the change case UND can be achieved by creating a new class which inherits from GameAction. The instance of this class should be registered at th beginning of this game in ActionPool and acted by game players when it is required. The robot player change case "RBT" can be implemented by adding a new class inherited from GamePlayer and overriding the method named Act.
 	
-	A Group is a ContainerSelector which can select elements in its collection according to their type and itorate them linearly.
+	The design patterns "visitor" and "singleton" are used in package kalah.dump. The class DumpSingleton makes DumpVisitor globally accessible. The class DumpVisitor wraps the IO and centralizes all the dumping functions. Any class who wants to display into IO can easily inherits from interface IDumpable and puts its dumping function in DumpVisitor. With the design in kalah.dump package, the change case PRE is easy to be matched by implementing interface IDumpable and add new dumping function in DumpVisitor.
 	
-	A PlayBoard is a CircularSelector of Group which can iterate elements in its collection circularly.
+	The "S/L" change case can be met by adding a serializer which enable to serialize and de-serialize the instance of Game to a local file. However, honestly speaking it is out of the original design.
 	
-	\Item{Modifiablity}{With this design, the virtual layout of play board can be easily changed by using different components (Store, House and Group). For example, we can have a new play board which support 5 or more players, and each of them has Store and House one by one in a Group.}
+	\subsection{Summary}
+	Based on the the analysis of each design against the change cases, design B and syu702 can satisfy the same number of changes cases. As regarding to design A and S1, design S1 is a little bit better than A since the designer starts to utilize some \gls{OO} design methods and put associated code together, however, the applying is sometimes not effective from the result.
 	
-	\subsection{kalah.rule}
+	\section{Empirical Relationship}
+	From the previous sections, we figure out that the design A, which has the fewest number of classes, has the fewest modifiability so that no change cases can be easily satisfied. The S1 have larger quantity of classes and interfaces, however, they are not effective in decoupling and functionality distributing. The modifiability of design S1 is close to design A, but higher since the awareness of using interface and enums. Both of design B and syu702 have sufficient quantity of abstraction and inheritance applied and can satisfy the equal number of the change cases with limited modifications. However, considering the outstanding performance the design syu702 has played in quantitative comparison, the design syu702 wins design B slightly on more modifiability.
+	Based on the analysis previous, if the M(x) stands for the modifiability of design x, the relationship of modifiability between each design is as Equation~\ref{eq:realtionship} implies:
 	
-	\ImageBlock{kalah_rule}{The design of kalah.rule package.}
+	\begin{equation} 
+	M(syu702) > M(B) > M(S1) > M(A)
+	\label{eq:realtionship} 
+	\end{equation}
 	
-	After players' action, the rules of the game will have effects. They are all defined as Figure~\ref{fig:kalah_rule} shows. Here I use a design pattern called "observer".
-	
-	If the RuleObserver observe a rule (for example CaptureOpponent) after player's action, the rule will affect the game automatically.
-	
-	\Item{Modifiablity}{With this design, the Game could have more rules by creating new rule classes which implement the IRule interface. They will bring more joy and complexity to this game.}
-	
-	\subsection{kalah.selector}
-	
-	\ImageBlock{kalah_selector}{The design of kalah.selector package.}
-	
-	The purpose of this package is to provide multiple ways to loop through and get certain element in a collection, details are showed in Figure~\ref{fig:kalah_selector}.
-	
-	The ISelectable interface defines the basic API of a selector.
-	
-	The Selector class is abstract, which has a collection of elements and is able to return the element which is pointed by current index.
-	
-	The LinearSelector and CircularSelector implement 2 ways to iterate each elements in its collection respectively.
-	
-	The ContainerSelector has to be a LinearSelector which holds a collection of Cotainer instances. This class can dynamically add and remove Store instance. It is also able to return subsets of its collection according to the type of elements.  
-	
-	\Item{Modifiablity}{With this design, the new iteration way (for example skip a house in each step of sowing) can be achieved easily by adding a new selector to the game, if required.}
-	
-	\subsection{kalah.dump}
-	
-	\ImageBlock{kalah_dump}{The design of kalah.dump package.}
-	As Figure~\ref{fig:kalah_dump} demonstrates, the IDumpable interface replaces the dump processing functionality by accept(). Each class who would like to access MockIO and dispaly anything should inherit it. 
-	
-	The DumpVisitor lets you define a new displaying operation without changing the classes of the elements on which it operates.
-	
-	The DumpSingleton class holds a static instance of DumpVisitor, providing global access to DumpVisitor.Visit().
-	
-	\Item{Modifiablity}{With this design, the classes who want to print anything to MockIO merely need to implement the methods defined in IDumpable interface. The DumpVisitor lets you define a new dump operation without changing the classes of the elements on which it operates. The DumpVisitor's global accessibility is guaranteed by DumpSingleton.}
-	
-	
-	\section{Design Result}
-	
-	\ImageBlock{design_result}{The execution result of my design.}
-	
-	My implementation has been tested under JRE 1.8 and JUnit 4.12. As we can see from Figure~\ref{fig:design_result}, it is able to pass all of the 19 test cases.
 	
 	
 	% An example of a floating figure using the graphicx package.
@@ -590,7 +595,7 @@
 	
 	
 	\section{Conclusion}
-	
+	From the comparison of the 4 designs, we can learn that the modifiability is such a abstract concept that varies on different environments. Even though it can be measured by some \gls{OO} design metrics quantitatively like what are demonstrated in quantitative comparison section, the real effects are still required to be tested against specific change cases because there is no guarantee between the statistic of metrics and the actual outcomes.  
 	
 	
 	
@@ -615,10 +620,10 @@
 	\section*{Acknowledgment}
 	
 	
-	I would like to express my special thanks of gratitude to my lecturer Ewan, whose critical thinking skills and humour in lecturing really impress me and teach me a lot. If there exists any marker on this assignment, I think he/she definitely also deserves my thanks, because reading and testing such a massive code must be torturing and time-consuming.
+	I would like to express my special thanks of gratitude to my lecturer Ewan, whose critical thinking skills and humour in lecturing really impress me and teach me a lot. If there exists any marker on this assignment, I think he/she definitely also deserves my thanks, because reading such a long report with tables and diagrams must be torturing and time-consuming.
 	
 	
-	
+	\printglossaries
 	
 	
 	% trigger a \newpage just before the given reference
@@ -636,9 +641,9 @@
 	% http://mirror.ctan.org/biblio/bibtex/contrib/doc/
 	% The IEEEtran BibTeX style support page is at:
 	% http://www.michaelshell.org/tex/ieeetran/bibtex/
-	%\bibliographystyle{IEEEtran}
+	\bibliographystyle{IEEEtran}
 	% argument is your BibTeX string definitions and bibliography database(s)
-	%\bibliography{IEEEabrv,../bib/paper}
+	\bibliography{IEEEabrv,references}
 	%
 	% <OR> manually copy in the resultant .bbl file
 	% set second argument of \begin to the number of references
