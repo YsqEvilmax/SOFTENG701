@@ -1,0 +1,17 @@
+\newcommand{\TabSOLIDColumn}[3]{
+	\textbf{#1} & \acrfull{#2} & #3 \\
+}
+
+\TableBlock{SOLID}{The SOLID principles definition.}{
+	\toprule
+	\toprule
+	& \textbf{Principle} & \textbf{Description} \\
+	\midrule
+	\TabSOLIDColumn{S}{SRP}{A class should have one, and only one, reason to change.}
+	\TabSOLIDColumn{O}{OCP}{Software entities should be open for extension, but closed for modification.}
+	\TabSOLIDColumn{L}{LSP}{Child classes must be substitutable for their parent classes.}
+	\TabSOLIDColumn{I}{ISP}{Make ﬁne grained interfaces that are client specific.}
+	\TabSOLIDColumn{D}{DIP}{Depend on abstractions, not on concretions.}
+	\bottomrule
+	\bottomrule
+}

@@ -1,0 +1,23 @@
+\usepackage{caption}
+\usepackage{graphicx}
+\graphicspath{ {image/} }
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+\newcommand{\ImageBlock}[2]{
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=\columnwidth]{#1}
+		\caption{#2}	
+		\label{fig:#1}
+	\end{figure}
+}
+
+
+\newcommand{\ImagePage}[2]{
+	\begin{minipage}[c]{\textwidth}% to keep image and caption on one page
+		\centering
+		\includegraphics[width=\textwidth]{#1}
+		\captionof{figure}{#2}	
+		\label{fig:#1}
+	\end{minipage}
+}

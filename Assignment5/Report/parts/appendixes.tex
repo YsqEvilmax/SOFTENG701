@@ -1,0 +1,16 @@
+\newcommand{\AppendixItem}[3]{
+	\section{#1}
+	\label{appendix:#2}
+	#3
+}
+
+\newcommand{\Appendix}{
+	\begin{appendices}	
+		\clearpage
+		\AppendixItem{UML Diagram of Applying OCP}{OCP-result}{\ImagePage{OCP-result}{The Changes of Applying OCP.}}
+		\clearpage
+		\AppendixItem{UML Diagram of Applying DIP}{DIP-result}{\ImagePage{DIP-result}{The Changes of Applying DIP.}}	
+		\clearpage
+	\end{appendices}
+}
+
